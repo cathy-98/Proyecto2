@@ -1,5 +1,5 @@
-@use 'abstracts/variables';
-@use 'abstracts/mixins';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .footer {
     background-color: variables.$dark-color;
