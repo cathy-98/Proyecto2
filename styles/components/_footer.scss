@@ -1,0 +1,33 @@
+.footer {
+    background-color: variables.$dark-color;
+    color: variables.$text-light-color;
+    padding: 30px 0;
+    text-align: center;
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__contact,
+    &__address {
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__link {
+        color: variables.$text-light-color;
+        text-decoration: none;
+
+        &:hover {
+            color: variables.$primary-color;
+            text-decoration: underline;
+        }
+    }
+}

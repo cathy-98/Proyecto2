@@ -1,0 +1,33 @@
+.header {
+    background-color: #ffffff; // Fondo blanco para el header
+    padding: 1rem 0;
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        
+        img {
+            height: 50px; // Altura del logo
+        }
+    }
+
+    &__nav {
+        .nav-link {
+            color: #007bff; // Color azul para enlaces
+            transition: color 0.3s;
+
+            &:hover {
+                color: #0056b3; // Color más oscuro al pasar el mouse
+            }
+        }
+    }
+
+    &__button {
+        background-color: #ff5722; // Color del botón
+        border-color: #ff5722;
+
+        &:hover {
+            background-color: darken(#ff5722, 10%); // Color del botón al pasar el mouse
+        }
+    }
+}
