@@ -1,0 +1,37 @@
+.testimonials-section {
+    padding: 2rem 1rem; // Espaciado vertical
+    background-color: variables.$light-color; // Cambia el color según tu variable
+
+    &__title {
+        text-align: center;
+        font-size: 1.5rem;
+        color: variables.$primary-color; // Azul para el título
+        margin-bottom: 2rem;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between; // Distribuye los testimonios
+        flex-wrap: wrap; // Permite que se ajusten en pantallas más pequeñas
+
+        .testimonial-card {
+            background-color: #fff; // Fondo blanco para los testimonios
+            border: 1px solid variables.$accent-color; // Borde con color secundario
+            border-radius: 8px; // Bordes redondeados
+            padding: 1rem; // Espaciado interno
+            margin: 0.5rem; // Espaciado entre testimonios
+            flex: 1 1 calc(30% - 1rem); // Ajusta el ancho para que sean tres columnas
+
+            &__author {
+                font-weight: bold; // Negrita para el autor
+                color: variables.$secondary-color; // Color del texto del autor
+                margin-bottom: 0.5rem; // Margen inferior
+            }
+
+            &__text {
+                font-size: 1rem; // Tamaño de texto
+                color: variables.$text-muted-color; // Color de texto secundario
+            }
+        }
+    }
+}
