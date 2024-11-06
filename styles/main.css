@@ -27,29 +27,37 @@
 }
 
 .header {
-  background-color: #ffffff;
-  padding: 1rem 0;
+  background-color: #f8f9fa;
+  padding: 1rem 2rem;
 }
-.header__brand {
+.header__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .header__brand img {
   height: 50px;
 }
-.header__nav .nav-link {
-  color: #007bff;
-  transition: color 0.3s;
+.header__nav {
+  display: flex;
+  gap: 2rem;
 }
-.header__nav .nav-link:hover {
-  color: #0056b3;
+.header__nav__link {
+  color: #00ADCD;
+  text-decoration: none;
+}
+.header__nav__link:hover {
+  color: #343a40;
 }
 .header__button {
-  background-color: #ff5722;
-  border-color: #ff5722;
+  background-color: #dc3545;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
 }
 .header__button:hover {
-  background-color: #ee3900;
+  background-color: #bd2130;
 }
 
 .team-section {

@@ -2,35 +2,45 @@
 @use '../abstracts/mixins';
 
 .header {
-    background-color: #ffffff; // Fondo blanco para el header
-    padding: 1rem 0;
+    background-color: variables.$light-color; // Color del fondo del navbar
+    padding: 1rem 2rem; // Espaciado interno
+
+    &__container {
+        display: flex;
+        align-items: center; // Centrar verticalmente
+        justify-content: space-between; // Espacio entre elementos
+    }
 
     &__brand {
-        display: flex;
-        align-items: center;
-        
         img {
             height: 50px; // Altura del logo
         }
     }
 
     &__nav {
-        .nav-link {
-            color: #007bff; // Color azul para enlaces
-            transition: color 0.3s;
+        display: flex; // Hacer que los enlaces se alineen horizontalmente
+        gap: 2rem; // Espacio entre los enlaces
+
+        &__link {
+            color: variables.$primary-color; // Color de los enlaces
+            text-decoration: none; // Sin subrayado
 
             &:hover {
-                color: #0056b3; // Color más oscuro al pasar el mouse
+                color: variables.$dark-color; // Cambiar color al pasar el mouse
             }
         }
     }
 
     &__button {
-        background-color: #ff5722; // Color del botón
-        border-color: #ff5722;
+        background-color: variables.$danger-color; // Color del botón
+        color: white; // Color del texto del botón
+        padding: 0.5rem 1rem; // Espaciado interno del botón
+        border: none; // Sin borde
+        border-radius: 5px; // Bordes redondeados
 
         &:hover {
-            background-color: darken(#ff5722, 10%); // Color del botón al pasar el mouse
+            background-color: darken(variables.$danger-color, 10%); // Color del botón al pasar el mouse
         }
     }
 }
+
