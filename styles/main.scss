@@ -6,3 +6,65 @@
 @use 'components/home';
 @use 'components/testimonials';
 @use 'components/contact';
+
+.header {
+    background-color: #ffffff; /* Color de fondo */
+    padding: 1rem; /* Espaciado */
+}
+
+.header__container {
+    display: flex; /* Usar flexbox para alineación */
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.header__nav {
+    display: flex; /* Alineación horizontal */
+}
+
+.navbar__link {
+    margin: 0 1rem; /* Espaciado entre enlaces */
+    text-decoration: none; /* Sin subrayado */
+    color: #007bff; /* Color del texto */
+}
+
+.header__button {
+    background-color: #ff5722; /* Color del botón */
+    color: white; /* Color del texto del botón */
+    padding: 0.5rem 1rem; /* Espaciado */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .header__container {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+
+    .header__nav {
+        flex-direction: column; /* Alinear enlaces en columna */
+        display: none; /* Ocultar menú inicialmente */
+        width: 100%; /* Ancho completo */
+    }
+
+    .header__nav.active {
+        display: flex; /* Mostrar menú cuando está activo */
+    }
+
+    .header__button {
+        width: 100%; /* Botón ocupa ancho completo */
+        margin-top: 1rem; /* Espacio superior */
+    }
+
+    /* Estilo para un botón hamburguesa */
+    .header__toggle {
+        display: block; /* Mostrar botón hamburguesa */
+        cursor: pointer; /* Cambiar cursor */
+    }
+}
+
+.header__toggle {
+    display: none; /* Ocultar el botón hamburguesa en pantallas grandes */
+}

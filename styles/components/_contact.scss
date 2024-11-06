@@ -2,6 +2,8 @@
 
 .contact-section {
     padding: 2rem;
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centrar el contenedor */
 }
 
 .form-title {
@@ -11,41 +13,33 @@
     margin-bottom: 2rem;
 }
 
-.container {
-    max-width: 600px;
-    margin: auto;
-}
-// Pendiente
-//.contact-form__label{ 
-//font-size: px;
-//}
-// Pendiente
 .contact-form {
     display: flex;
     flex-direction: column;
 
     &__group {
         margin-bottom: 1.5rem;
+    }
 
-        &__label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: variables.$text-color;
-        }
+    &__label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: variables.$text-color;
+    }
 
-        &__input,
-        &__textarea {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid variables.$accent-color;
-            border-radius: 4px;
-            color: variables.$text-color;
-            background-color: variables.$light-color;
-        }
+    &__input,
+    &__textarea {
+        width: 100%; /* Ancho completo */
+        padding: 0.5rem; /* Espaciado interno */
+        border: 1px solid variables.$accent-color; /* Borde */
+        border-radius: 4px; /* Bordes redondeados */
+        color: variables.$text-color;
+        background-color: variables.$light-color;
+    }
 
-        &__textarea {
-            resize: none;
-        }
+    &__textarea {
+        resize: none; /* Deshabilitar el redimensionamiento */
+        height: 150px; /* Altura fija para el área de texto */
     }
 
     &__button {
@@ -55,6 +49,7 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        width: 100%; /* Ancho completo del botón */
 
         &:hover {
             background-color: darken(variables.$secondary-color, 10%);
@@ -63,8 +58,8 @@
 }
 
 .map-container {
-    width: 100%;
-    margin-top: 2rem auto;
+    width: 100%; /* Asegura que el contenedor del mapa sea ancho completo */
+    margin-top: 2rem;
 
     &__label {
         display: block;
@@ -75,40 +70,9 @@
     }
 
     &__iframe {
-        width: 100%;
+        width: 100%; /* Ancho completo del iframe */
         height: 450px;
         border: 0;
-    }
-}
-
-.footer {
-    background-color: variables.$dark-color;
-    color: variables.$text-light-color;
-    padding: 2rem 0;
-
-    &__container {
-        text-align: center;
-        margin: 0 auto;
-        max-width: 1200px;
-
-        &__contact,
-        &__address {
-            margin: 0.5rem 0;
-        }
-
-        &__social {
-            margin-top: 1rem;
-
-            &__link {
-                margin: 0 1rem;
-                color: variables.$text-light-color;
-                text-decoration: none;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
     }
 }
 
