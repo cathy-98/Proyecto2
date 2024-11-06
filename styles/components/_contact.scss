@@ -1,0 +1,80 @@
+@use '../abstracts/variables';
+
+.contact-section {
+    padding: 2rem; // Espaciado alrededor de la sección
+}
+
+.form-title {
+    text-align: center; // Centrar el título
+    font-size: 2rem; // Tamaño del título
+    color: variables.$primary-color; // Color del título
+    margin-bottom: 2rem; // Espacio inferior
+}
+
+.container {
+    max-width: 600px; // Ancho máximo del formulario
+    margin: auto; // Centrar el contenedor
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    &__group {
+        margin-bottom: 1.5rem;
+
+        &__label {
+            display: block; // Etiqueta como bloque
+            margin-bottom: 0.5rem; // Espaciado inferior
+            color: variables.$text-color; // Color del texto de la etiqueta
+        }
+
+        &__input,
+        &__textarea {
+            width: 100%; // Ancho completo
+            padding: 0.5rem; // Espaciado interno
+            border: 1px solid variables.$accent-color; // Borde del input
+            border-radius: 4px; // Bordes redondeados
+            color: variables.$text-color; // Color del texto en los inputs
+            background-color: variables.$light-color; // Color de fondo
+        }
+
+        &__textarea {
+            resize: none; // Evitar el redimensionamiento
+        }
+    }
+
+    &__button {
+        background-color: variables.$secondary-color; // Color del botón
+        color: white; // Color del texto del botón
+        padding: 0.5rem 1rem; // Espaciado interno del botón
+        border: none; // Sin borde
+        border-radius: 4px; // Bordes redondeados
+        cursor: pointer; // Cambiar cursor al pasar
+
+        &:hover {
+            background-color: darken(variables.$secondary-color, 10%); // Efecto hover
+        }
+    }
+}
+
+.map-container {
+    width: 100%; // Ancho completo para el mapa
+    margin-top: 2rem; // Espacio superior
+
+    &__label {
+        display: block; // Etiqueta como bloque
+        text-align: center; // Centrar el texto
+        margin-bottom: 0.5rem; // Espacio debajo del label
+        font-size: 1.25rem; // Tamaño de fuente para el label
+        color: variables.$primary-color; // Color del texto del label
+    }
+
+    &__iframe {
+        width: 100%; // Asegurar que el iframe ocupe todo el ancho
+        height: 450px; // Altura del mapa
+        border: 0; // Sin borde
+    }
+}
+
+

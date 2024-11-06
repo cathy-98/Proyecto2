@@ -1,65 +1,64 @@
 @use '../abstracts/variables';
-@use '../abstracts/mixins';
-
+@use '../abstracts/mixins'; 
 
 .welcome-section {
     text-align: center;
     padding: 2rem;
-    background-color: variables.$background-color;
+    background-color: variables.$background-color; // Cambia según tus variables
 
     &__title {
-        font-size: 2rem;
-        color: variables.$primary-color; // Azul para títulos
-        margin-bottom: 1rem;
+        font-size: 2rem; // Tamaño del título
+        color: variables.$primary-color; // Color azul para títulos
+        margin-bottom: 1rem; // Espacio inferior
     }
 
     &__description {
-        font-size: 1.1rem;
+        font-size: 1.1rem; // Tamaño de la descripción
         color: variables.$text-color; // Color de texto
-        margin-bottom: 2rem;
+        margin-bottom: 2rem; // Espacio inferior
     }
 }
 
 .services-section {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem; // Espaciado para la sección de servicios
     
     &__title {
-        text-align: center;
-        font-size: 1.5rem;
+        text-align: center; // Centrando el título
+        font-size: 1.5rem; // Tamaño del título
         color: variables.$primary-color; // Azul para títulos
-        margin-bottom: 2rem;
+        margin-bottom: 2rem; // Espacio inferior
     }
 
     &__container {
-        display: flex;
-        justify-content: space-between;
+        display: flex; // Utilizando flexbox para distribución
+        justify-content: space-between; // Espacio entre tarjetas
         flex-wrap: wrap; // Para que las tarjetas se ajusten en pantallas más pequeñas
 
         .service-card {
             background-color: #fff; // Fondo blanco
-            border: none;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 1rem;
-            margin: 1rem;
-            text-align: center;
+            border: none; // Sin borde
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Sombra
+            padding: 1rem; // Espacio interno
+            margin: 1rem; // Margen entre tarjetas
+            text-align: center; // Centrar texto
             flex: 1 1 calc(30% - 2rem); // Ajustar el ancho para tres columnas
-            transition: transform 0.3s;
+            transition: transform 0.3s; // Transición suave
 
             &:hover {
                 transform: translateY(-5px); // Efecto al pasar el mouse
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); // Sombra al hacer hover
             }
 
             &__icon {
                 font-size: 3rem; // Tamaño del ícono
                 color: variables.$primary-color; // Color del ícono
-                margin-bottom: 1rem;
+                margin-bottom: 1rem; // Espacio inferior
             }
 
             &__title {
                 font-size: 1.25rem; // Tamaño del título
-                color: variables.$secondary-color; // Color secundario para el título
-                margin-top: 0.5rem;
+                color: variables.$secondary-color; // Color secundario
+                margin-top: 0.5rem; // Espacio superior
             }
 
             &__text {
@@ -70,32 +69,122 @@
     }
 }
 
-.footer {
-    background-color: variables.$dark-color; // Color oscuro para el footer
-    color: variables.$text-light-color; // Color claro para el texto
-    padding: 2rem 0;
+// Sección de Testimonios
+.testimonials-section {
+    padding: 2rem 1rem; // Espaciado para la sección de testimonios
+    background-color: variables.$light-color; // Color de fondo
+
+    &__title {
+        text-align: center; // Centrando el título
+        font-size: 2rem; // Tamaño del título
+        color: variables.$primary-color; // Color del título
+        margin-bottom: 2rem; // Espacio inferior
+    }
 
     &__container {
-        text-align: center; // Centrar texto en el footer
-        margin: 0 auto;
-        max-width: 1200px; // Limitar el ancho del footer
+        display: flex; // Usando flexbox
+        justify-content: space-between; // Espacio entre tarjetas
+        flex-wrap: wrap; // Permitir que las tarjetas se ajusten
 
-        &__contact,
-        &__address {
-            margin: 0.5rem 0; // Espaciado para el texto
-        }
+        .testimonial-card {
+            background-color: #fff; // Fondo blanco
+            border: 1px solid variables.$accent-color; // Borde con color de acento
+            border-radius: 8px; // Bordes redondeados
+            padding: 1.5rem; // Espacio interno
+            margin: 1rem; // Margen entre tarjetas
+            flex: 1 1 calc(30% - 2rem); // Ajustar el ancho para tres columnas
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Sombra
+            transition: transform 0.2s; // Transición suave
 
-        &__social {
-            margin-top: 1rem; // Margen para el bloque social
-            a {
-                margin: 0 1rem; // Espaciado entre enlaces
-                color: variables.$text-light-color; // Color del texto
-                text-decoration: none;
+            &:hover {
+                transform: translateY(-5px); // Efecto al pasar el mouse
+            }
 
-                &:hover {
-                    text-decoration: underline; // Subrayar en hover
-                }
+            &__icon {
+                font-size: 2rem; // Tamaño del ícono
+                color: variables.$primary-color; // Color del ícono
+                margin-bottom: 0.5rem; // Espacio entre ícono y texto
+            }
+
+            &__author {
+                font-weight: bold; // Negrita para el autor
+                color: variables.$secondary-color; // Color del nombre del autor
+                margin-bottom: 0.5rem; // Espacio inferior
+                font-size: 1.2rem; // Tamaño del nombre del autor
+            }
+
+            &__text {
+                font-size: 1rem; // Tamaño del texto
+                color: variables.$text-muted-color; // Color de texto secundario
+                line-height: 1.5; // Mejorar la legibilidad
             }
         }
     }
+}
+
+// Media Queries
+@media (max-width: 768px) {
+    .welcome-section {
+        padding: 1rem; // Ajustar padding para móviles
+        &__title {
+            font-size: 1.5rem; // Reducir tamaño del título en móviles
+        }
+        &__description {
+            font-size: 1rem; // Reducir tamaño de la descripción
+        }
+    }
+
+    .services-section {
+        &__container {
+            flex-direction: column; // Cambiar a columna en móviles
+        }
+        .service-card {
+            flex: 1 1 100%; // Tarjetas ocupan todo el ancho
+            margin-bottom: 1rem; // Espacio entre tarjetas
+        }
+    }
+
+    .testimonials-section {
+        &__container {
+            flex-direction: column; // Cambiar a columna en móviles
+            align-items: center; // Centrar elementos
+        }
+        .testimonial-card {
+            flex: 1 1 100%; // Tarjetas ocupan todo el ancho
+            margin: 0.5rem 0; // Espacio vertical
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .welcome-section {
+        padding: 2rem; // Mantener padding para tablets
+        &__title {
+            font-size: 1.8rem; // Ajustar tamaño del título para tablets
+        }
+    }
+
+    .services-section {
+        &__container {
+            flex-direction: row; // Alinear en fila para tablets
+        }
+        .service-card {
+            flex: 1 1 calc(45% - 1rem); // Dos tarjetas por fila
+            margin: 0.5rem; // Espaciado entre tarjetas
+        }
+    }
+
+    .testimonials-section {
+        &__container {
+            flex-direction: row; // Alinear en fila para tablets
+        }
+        .testimonial-card {
+            flex: 1 1 calc(45% - 1rem); // Dos tarjetas por fila
+            margin: 0.5rem; // Espaciado entre tarjetas
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    // Estilos para escritorio, si es necesario
 }

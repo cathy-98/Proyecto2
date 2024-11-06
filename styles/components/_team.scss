@@ -1,69 +1,86 @@
 @use '../abstracts/variables';
-@use '../abstracts/mixins';
+@use '../abstracts/mixins'; 
 
-.team-section {
+.container {
+    max-width: 1200px;
+    margin: auto;
     padding: 2rem;
-    background-color: variables.$background-color;
+}
 
-    &__title {
-        text-align: center;
-        color: variables.$primary-color;
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-    }
+.section-title {
+    text-align: center; // Centrar el título
+    font-size: 2rem; // Tamaño del título
+    color: variables.$primary-color; // Color del título
+    margin-bottom: 1.5rem; // Espacio inferior
+}
 
-    &__description {
-        text-align: center;
-        font-size: 1.1rem;
-        color: variables.$text-color;
-        margin-bottom: 2rem;
-    }
+.section-description {
+    text-align: center; // Centrar el texto de descripción
+    font-size: 1rem; // Tamaño del texto de descripción
+    color: variables.$text-muted-color; // Color del texto de descripción
+    margin-bottom: 2rem; // Espacio inferior
+}
 
-    &__container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+.cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-    &__card {
-        background-color: #fff;
-        border: none;
-        @include mixins.border-radius(10px);
+    .card {
+        background-color: #ffffff;
+        border: 1px solid variables.$accent-color;
+        border-radius: 8px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        padding: 2rem;
-        width: calc(25% - 1.5rem);
-        max-width: 280px;
-        text-align: center;
-        margin-bottom: 1.5rem;
-        transition: transform 0.3s, box-shadow 0.3s;
+        padding: 1rem;
+        margin: 1rem;
+        flex: 1 1 calc(23% - 2rem);
+        transition: transform 0.3s;
 
         &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
         }
 
         &__image {
             width: 100%;
-            height: auto;
+            height: 200px;
             object-fit: cover;
-            border-radius: 15px 15px 0 0;
-            margin-bottom: 1rem;
+            border-radius: 4px;
         }
 
         &__title {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             color: variables.$secondary-color;
-            margin-bottom: 0.5rem;
-        }
-
-        &__specialty {
-            font-size: 1.1rem;
-            color: variables.$text-color;
+            margin: 0.5rem 0;
         }
 
         &__description {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: variables.$text-muted-color;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-section {
+        .card {
+            flex: 1 1 100%;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cards-section {
+        .card {
+            flex: 1 1 calc(48% - 1rem);
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .cards-section {
+        .card {
+            flex: 1 1 calc(23% - 2rem);
         }
     }
 }

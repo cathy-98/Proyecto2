@@ -9,17 +9,19 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a class="navbar__brand" href="index.html">
-                <img src="https://i0.wp.com/hospitalbaseosorno.cl/wp-content/uploads/2020/11/hbo_logoweb.png" alt="Hospital Logo" height="50">
+    <!-- Barra de navegación -->
+    <nav class="header">
+        <div class="header__container">
+            <a class="header__brand" href="index.html">
+                <img src="https://i0.wp.com/hospitalbaseosorno.cl/wp-content/uploads/2020/11/hbo_logoweb.png"
+                    alt="Hospital Logo">
             </a>
-            <div class="navbar__links">
+            <div class="header__nav">
                 <a class="navbar__link" href="index.html">Home</a>
                 <a class="navbar__link" href="equipo_medico.html">Equipo Médico</a>
                 <a class="navbar__link" href="contacto.html">Contacto</a>
             </div>
-            <a class="btn btn-danger" href="#">Reservar Cita</a>
+            <a class="header__button" href="#">Reservar Cita</a>
         </div>
     </nav>
 
@@ -28,44 +30,33 @@
         <p class="team-section__description">En nuestro hospital, nuestro equipo médico combina excelencia técnica y un compromiso genuino con el bienestar de cada paciente. Cada atención refleja nuestro enfoque humano y profesional, asegurando salud con corazón.</p>
     </section>
 
-    <h2 class="team-section__subtitle">Nuestros médicos</h2>
-    <div class="team-section__container">
-        <div class="team-section__card">
-            <img src="assets/img/doctor1.webp" class="team-section__card__image">
-            <div class="team-section__card__body">
-                <h5 class="team-section__card__title">Dr. Juan Pérez</h5>
-                <p class="team-section__card__specialty">Especialista en Urgencias 24/7</p>
-                <p class="team-section__card__description">Atención médica urgente en cualquier momento del día.</p>
-            </div>
-        </div>
-
-        <div class="team-section__card">
-            <img src="assets/img/doctora2.webp" class="team-section__card__image">
-            <div class="team-section__card__body">
-                <h5 class="team-section__card__title">Dra. María López</h5>
-                <p class="team-section__card__specialty">Especialista en Consultas Médicas</p>
-                <p class="team-section__card__description">Atención personalizada con nuestros médicos especialistas.</p>
-            </div>
-        </div>
-
-        <div class="team-section__card">
-            <img src="assets/img/doctor3.webp" class="team-section__card__image">
-            <div class="team-section__card__body">
-                <h5 class="team-section__card__title">Dr. Carlos Martínez</h5>
-                <p class="team-section__card__specialty">Especialista en Hospitalización</p>
-                <p class="team-section__card__description">Habitaciones confortables para tu recuperación.</p>
-            </div>
-        </div>
-
-        <div class="team-section__card">
-            <img src="assets/img/doctora4.webp" class="team-section__card__image">
-            <div class="team-section__card__body">
-                <h5 class="team-section__card__title">Dra. Elena García</h5>
-                <p class="team-section__card__specialty">Especialista en Hospitalización</p>
-                <p class="team-section__card__description">Habitaciones confortables para tu recuperación.</p>
-            </div>
-        </div>
-    </div>
+    <section class="cards-section">
+        <article class="card">
+            <img class="card__image" src="https://images.ecestaticos.com/t5SPttdKoWWiDUPi9k0lx7OGsSY=/0x70:1716x1040/972x547/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F8db%2F8b6%2Faa5%2F8db8b6aa54b585253e15f79a68447aeb.jpg" alt="Dr. Juan Pérez">
+            <h3 class="card__title">Dr. Juan Pérez</h3>
+            <p class="card__description">Especialista en Urgencias 24/7</p>
+            <p class="card__description">Atención médica urgente en cualquier momento del día.</p>
+        </article>
+        <article class="card">
+            <img class="card__image" src="https://t1.uc.ltmcdn.com/es/posts/0/0/3/como_se_dice_la_medica_o_la_medico_30300_600.webp" alt="Dra. María López">
+            <h3 class="card__title">Dra. María López</h3>
+            <p class="card__description">Especialista en Consultas Médicas</p>
+            <p class="card__description">Atención personalizada con nuestros médicos especialistas.</p>
+        </article>
+        <article class="card">
+            <img class="card__image" src="https://ahoradoctor.cl/wp-content/uploads/doctor-gafas-ahoradoctor-768x768.jpg" alt="Dr. Carlos Martínez">
+            <h3 class="card__title">Dr. Carlos Martínez</h3>
+            <p class="card__description">Especialista en Hospitalización</p>
+            <p class="card__description">Habitaciones confortables para tu recuperación.</p>
+        </article>
+        <article class="card">
+            <img class="card__image" src="https://cdn.agenciasinc.es/var/ezwebin_site/storage/images/_aliases/img_1col/noticias/solo-el-8-de-las-medicas-alcanza-puestos-de-responsabilidad-en-hospitales/3405721-5-esl-MX/Solo-el-8-de-las-medicas-alcanza-puestos-de-responsabilidad-en-hospitales.jpg" alt="Dra. Ana García">
+            <h3 class="card__title">Dra. Ana García</h3>
+            <p class="card__description">Especialista en Pediatría</p>
+            <p class="card__description">Cuidado y atención para los más pequeños.</p>
+        </article>
+    </section>
+    
 
     <footer class="footer">
         <div class="footer__container">

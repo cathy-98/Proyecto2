@@ -1,51 +1,53 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
 .testimonials-section {
-    padding: 2rem 1rem;
-    background-color: variables.$light-color;
+    padding: 2rem 1rem; // Espaciado para la sección de testimonios
+    background-color: variables.$light-color; // Usar el color claro definido en las variables
 
     &__title {
-        text-align: center;
-        font-size: 2rem;
-        color: variables.$primary-color;
-        margin-bottom: 2rem;
+        text-align: center; // Centrando el título
+        font-size: 2rem; // Tamaño del título
+        color: variables.$primary-color; // Color del título
+        margin-bottom: 2rem; // Espacio inferior
     }
 
     &__container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap; // Permite que las tarjetas se ajusten
-        margin: 0 -1rem; // Para el espaciado entre tarjetas
+        display: flex; // Utilizando flexbox para el diseño
+        justify-content: space-between; // Espacio entre tarjetas
+        flex-wrap: wrap; // Permitir que las tarjetas se ajusten a varias filas
 
         .testimonial-card {
-            background-color: #fff;
-            border: 1px solid variables.$accent-color;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1rem; // Margen entre las tarjetas
-            flex: 1 1 calc(30% - 2rem); // Ajusta el ancho de las tarjetas
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
+            background-color: #fff; // Fondo blanco para las tarjetas
+            border: 1px solid variables.$accent-color; // Borde con color de acento
+            border-radius: 8px; // Bordes redondeados
+            padding: 1.5rem; // Espacio interno
+            margin: 1rem; // Margen entre tarjetas
+            flex: 1 1 calc(30% - 2rem); // Ajustar el ancho para tres columnas
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Sombra para profundidad
+            transition: transform 0.2s; // Transición suave al pasar el mouse
 
             &:hover {
-                transform: translateY(-5px);
+                transform: translateY(-5px); // Efecto al pasar el mouse
             }
 
             &__icon {
-                font-size: 2rem; // Ajusta el tamaño del ícono
+                font-size: 2rem; // Tamaño del ícono
                 color: variables.$primary-color; // Color del ícono
                 margin-bottom: 0.5rem; // Espacio entre ícono y texto
             }
 
             &__author {
-                font-weight: bold;
-                color: variables.$secondary-color;
-                margin-bottom: 0.5rem;
-                font-size: 1.2rem;
+                font-weight: bold; // Negrita para el autor
+                color: variables.$secondary-color; // Color del nombre del autor
+                margin-bottom: 0.5rem; // Espacio inferior
+                font-size: 1.2rem; // Tamaño del nombre del autor
             }
 
             &__text {
-                font-size: 1rem;
-                color: variables.$text-muted-color;
-                line-height: 1.5;
+                font-size: 1rem; // Tamaño del texto
+                color: variables.$text-muted-color; // Color de texto secundario
+                line-height: 1.5; // Mejorar la legibilidad
             }
         }
     }
