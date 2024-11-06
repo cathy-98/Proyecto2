@@ -1,3 +1,6 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
 .header {
     background-color: #ffffff; // Fondo blanco para el header
     padding: 1rem 0;
