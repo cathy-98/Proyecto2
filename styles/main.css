@@ -111,29 +111,86 @@
   color: #6c757d;
 }
 
-.home__welcome {
+.welcome-section {
   text-align: center;
-  margin: 2rem 0;
+  padding: 2rem;
+  background-color: #f8f9fa;
 }
-.home__welcome h1 {
+.welcome-section__title {
+  font-size: 2rem;
   color: #00ADCD;
-  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
-.home__welcome p {
-  color: #343a40;
+.welcome-section__description {
   font-size: 1.1rem;
+  color: #343a40;
+  margin-bottom: 2rem;
 }
-.home__services {
-  margin: 2rem 0;
+
+.services-section {
+  padding: 2rem 1rem;
 }
-.home__services h2 {
+.services-section__title {
   text-align: center;
+  font-size: 1.5rem;
   color: #00ADCD;
+  margin-bottom: 2rem;
 }
-.home__testimonials {
-  margin: 2rem 0;
+.services-section__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.home__testimonials h2 {
+.services-section__container .service-card {
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin: 1rem;
   text-align: center;
+  flex: 1 1 calc(30% - 2rem);
+  transition: transform 0.3s;
+}
+.services-section__container .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.services-section__container .service-card__icon {
+  font-size: 3rem;
   color: #00ADCD;
+  margin-bottom: 1rem;
+}
+.services-section__container .service-card__title {
+  font-size: 1.25rem;
+  color: #ff5722;
+  margin-top: 0.5rem;
+}
+.services-section__container .service-card__text {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 2rem 0;
+}
+.footer__container {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.footer__container__contact, .footer__container__address {
+  margin: 0.5rem 0;
+}
+.footer__container__social {
+  margin-top: 1rem;
+}
+.footer__container__social a {
+  margin: 0 1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer__container__social a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */

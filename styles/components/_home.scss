@@ -1,38 +1,101 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 
-.home {
+
+.welcome-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: variables.$background-color;
+
+    &__title {
+        font-size: 2rem;
+        color: variables.$primary-color; // Azul para títulos
+        margin-bottom: 1rem;
+    }
+
+    &__description {
+        font-size: 1.1rem;
+        color: variables.$text-color; // Color de texto
+        margin-bottom: 2rem;
+    }
+}
+
+.services-section {
+    padding: 2rem 1rem;
     
-
-    &__welcome {
+    &__title {
         text-align: center;
-        margin: 2rem 0;
-
-        h1 {
-            color: variables.$primary-color; 
-            font-size: 2.5rem; 
-        }
-
-        p {
-            color: variables.$text-color; 
-            font-size: 1.1rem; 
-        }
+        font-size: 1.5rem;
+        color: variables.$primary-color; // Azul para títulos
+        margin-bottom: 2rem;
     }
 
-    &__services {
-        margin: 2rem 0;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; // Para que las tarjetas se ajusten en pantallas más pequeñas
 
-        h2 {
+        .service-card {
+            background-color: #fff; // Fondo blanco
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            margin: 1rem;
             text-align: center;
-            color: variables.$primary-color; 
+            flex: 1 1 calc(30% - 2rem); // Ajustar el ancho para tres columnas
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: translateY(-5px); // Efecto al pasar el mouse
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            &__icon {
+                font-size: 3rem; // Tamaño del ícono
+                color: variables.$primary-color; // Color del ícono
+                margin-bottom: 1rem;
+            }
+
+            &__title {
+                font-size: 1.25rem; // Tamaño del título
+                color: variables.$secondary-color; // Color secundario para el título
+                margin-top: 0.5rem;
+            }
+
+            &__text {
+                font-size: 1rem; // Tamaño del texto
+                color: variables.$text-muted-color; // Color de texto secundario
+            }
         }
     }
+}
 
-    &__testimonials {
-        margin: 2rem 0; 
-        h2 {
-            text-align: center;
-            color: variables.$primary-color; 
+.footer {
+    background-color: variables.$dark-color; // Color oscuro para el footer
+    color: variables.$text-light-color; // Color claro para el texto
+    padding: 2rem 0;
+
+    &__container {
+        text-align: center; // Centrar texto en el footer
+        margin: 0 auto;
+        max-width: 1200px; // Limitar el ancho del footer
+
+        &__contact,
+        &__address {
+            margin: 0.5rem 0; // Espaciado para el texto
+        }
+
+        &__social {
+            margin-top: 1rem; // Margen para el bloque social
+            a {
+                margin: 0 1rem; // Espaciado entre enlaces
+                color: variables.$text-light-color; // Color del texto
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline; // Subrayar en hover
+                }
+            }
         }
     }
 }
